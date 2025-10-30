@@ -197,8 +197,20 @@ function addFavorite(event) {
     form.reset();
     console.log('Form reset - ready for next favorite!');
 
-    // Step 6: Display the updated favorites list
+    // Add to favorites array
+    favorites.push(newFavorite);
+    console.log('Total favorites:', favorites.length);
+
+    // Save to localStorage
+    saveFavorites();
+
+    // Clear the form
+    form.reset();
+
+    // Display updated list (resets filters)
     displayFavorites();
+
+    console.log('Favorite added successfully!');
 }
 
 // Connect the addFavorite function to the form submit event  (this and the console log below may need to go down with the addfavorites function?)

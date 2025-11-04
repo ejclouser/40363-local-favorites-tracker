@@ -1,11 +1,12 @@
 // ==========================================
 // PROJECT 2: LOCAL FAVORITES TRACKER
-// LAB14: Delete, Search, and Filter
+// LAB15: localStorage Persistence - COMPLETE!
 // ==========================================
 
-console.log('LAB14: Delete, Search, and Filter');
+console.log('LAB15: localStorage Persistence');
+console.log('Project 2: Local Favorites Tracker - COMPLETE!');
 
-// Array to store all favorites (we'll use this in LAB14)
+// Array to store all favorites
 let favorites = [];
 
 // Get references to DOM elements
@@ -154,6 +155,29 @@ function deleteFavorite(index) {
     }
 }
 
+// Function to clear all favorites
+function clearAllFavorites() {
+    // Confirm with user
+    const confirmClear = confirm('Are you sure you want to delete ALL favorites? This cannot be undone!');
+
+    if (confirmClear) {
+        // Clear the array
+        favorites = [];
+        console.log('All favorites cleared');
+
+        // Clear from localStorage
+        localStorage.removeItem('localFavorites');
+        console.log('localStorage cleared');
+
+        // Display empty state
+        displayFavorites();
+
+        alert('All favorites have been deleted.');
+    } else {
+        console.log('Clear all cancelled by user');
+    }
+}
+
 // Function to handle adding a new favorite
 function addFavorite(event) {
     event.preventDefault();  // Prevent page reload
@@ -228,7 +252,12 @@ console.log('Search and filter event listeners attached!');
 
 console.log('Event listener attached - form is ready!');
 
-
+// Connect clear all button
+const clearAllBtn = document.getElementById('clear-all-btn');
+if (clearAllBtn) {
+    clearAllBtn.addEventListener('click', clearAllFavorites);
+    console.log('Clear all button connected');
+}
 
 // Load saved favorites from localStorage on startup
 loadFavorites();

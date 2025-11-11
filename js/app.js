@@ -221,9 +221,7 @@ function addFavorite(event) {
     form.reset();
     console.log('Form reset - ready for next favorite!');
 
-    // Add to favorites array
-    favorites.push(newFavorite);
-    console.log('Total favorites:', favorites.length);
+    
 
     // Save to localStorage
     saveFavorites();

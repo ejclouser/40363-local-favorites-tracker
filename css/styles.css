@@ -46,7 +46,7 @@ body {
    LAB11: Add header with gradient background
    ========================================== */
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, yellow 0%, #4965f4 100%);
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -102,7 +102,7 @@ label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #555;
+    color: blue;
 }
 
 input[type="text"],
@@ -149,8 +149,8 @@ textarea {
 }
 
 .btn-primary {
-    background-color: #667eea;
-    color: white;
+    background-color: yellow;
+    color: black;
 }
 
 .btn-danger {
@@ -179,12 +179,12 @@ textarea {
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #c82333;
     color: white;
 }
 
 .btn-secondary:hover {
-    background-color: #5a6268;
+    background-color: red;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4);
 }
@@ -250,7 +250,7 @@ textarea {
 }
 
 .favorite-card:hover {
-    border-color: #667eea;
+    border-color: yellow;
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
     transform: translateY(-5px);
 }
